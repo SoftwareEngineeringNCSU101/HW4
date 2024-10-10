@@ -1,0 +1,16 @@
+name: Run Script for Task2
+
+on: [push,pull_request]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: run the script
+        run: |
+          chmod +x task2.sh
+          ./task2.sh
